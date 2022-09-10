@@ -1,0 +1,168 @@
+/* marquee */
+.marquee-background {
+    background-image: url(./assets/blurLightsBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: max-content;
+    padding: 5rem 0;
+}
+.theater.marquee-background {
+    background-image: url(./assets/theatre.jpg);
+}
+  
+  .orb {
+    position: relative;
+    width: var(--orb-width);
+    height: var(--orb-width);
+    background: #999;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 50px;
+    float: left;
+    opacity: 0.8;
+    transition: all .2s ease-out;
+  }
+  .orb-img {
+    border-radius: 50%;
+  }
+  .job-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+  }
+  .job-title.double{
+    font-size: 1.2rem;
+  }
+  .sub {
+    font-size: .75rem;
+    text-align: center;
+    position: absolute;
+    top: 200px;
+    padding-top: 30px;
+  }
+  .pop-up{
+    /* display: none; */
+    position: fixed;
+    margin: auto;
+    width: 85%;
+    height: 75vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: rgba(255, 255, 255, 0.123);
+  }
+  .pop-up-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+  }
+  .pop-up-img{
+    border-radius: 50%;
+    width: 75px;
+  }
+  .pop-up-body{
+    display: flex;
+    
+  }
+  .sub-head {
+    display: none;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: start;
+    font-weight: 700;
+}
+  .project-list{
+    display: none;
+    height: 150px;
+    overflow-y: scroll;
+    text-align: start;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+  .list-item{
+    margin-bottom: 1rem;
+  }
+  .main{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    font-size: 1rem;
+  }
+  .direction-statement {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  .head{
+    text-align: center;
+    margin-top:1rem;
+  }
+  .head .titles {
+    color: rgb(37, 37, 37);
+  }
+  .company-name {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: 500;
+    width: max-content;
+    height: max-content;
+  }
+  
+  .orb:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .one {background:transparent;
+    background-image:url(./assets/company-icons/rws-logo-main.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+  
+  
+  .marquee {
+    background-color: #ffffff8a;
+    height: 550px;
+    width: 100vw;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .marquee--inner {
+    display: block;
+    width: 200%;
+    margin: 70px 0;
+    position: absolute;
+    animation: marquee 20s linear infinite;
+  }
+  
+  .marquee--inner:hover {
+    animation-play-state: paused;
+  }
+  
+  span {
+    float: left;
+    width: 50%;
+  }
+  .is-visible{display: block;}
+
+  /* @keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+  } */

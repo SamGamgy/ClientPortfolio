@@ -1,0 +1,299 @@
+
+.nav {
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    display:flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    gap:5rem;
+    color: white;
+    height:4rem;
+    padding:0 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    background:linear-gradient(-45deg,var(--accent2), var(--accent1), var(--accent3), var(--accent4));
+    background-size: 400% 400%;
+    animation: nav-gradient 20s ease infinite;
+    z-index: 1000;
+}
+@keyframes nav-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.nav-links{
+    padding:1.2rem;
+    color:white;
+    transition: all 0.5s ease;
+}
+.nav-links:hover{
+    /* transform: scale(1.2); */
+    border-bottom: 5px solid var(--accent1bright) ;
+    
+    cursor: pointer;
+}
+.current{
+    border-bottom: 5px solid var(--accent1bright) ;
+    
+}
+.logo {
+    margin-right:auto;
+}
+.main-background {
+    background-image: url('./assets/blurLightsBackground.jpg');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height:600px;
+}
+.title {
+    padding-top: 13rem;
+    color: white;
+    text-align: center;
+    position:relative;
+    
+}
+.title h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 10rem;
+    
+}
+.titles {
+    font-size: 3rem;
+    color:var(--accent4bright);
+}
+.word-changer:before {
+    content:'Technical Director';
+    animation: word-change 10s infinite ease-in-out;
+}
+@keyframes word-change {
+    0% {content: 'Logistics Manager'; opacity:0;}
+    12% {content: 'Logistics Manager'; opacity:1;}
+    24% {content: 'Logistics Manager'; opacity:0;}
+    25% {content: 'Stage Manager'; opacity:0; }
+    37% {content: 'Stage Manager'; opacity:1; color:var(--accent1)}
+    49% {content: 'Stage Manager'; opacity:0; }
+    50% {content: 'Director of Operations'; opacity:0; }
+    62% {content: 'Director of Operations'; opacity:1; color:var(--accent2)}
+    74% {content: 'Director of Operations'; opacity:0; }
+    75% {content: 'Project Coordinator'; opacity:0;}
+    87% {content: 'Project Coordinator'; opacity:1; color:var(--accent3)}
+    99% {content: 'Project Coordinator'; opacity:0;}
+    100% {content: 'Logistics Manager'; opacity:0;}
+}
+.who-background {
+    background-image: url('./assets/backstage.jpg');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height:600px;
+}
+.background-shape-one {
+    position: absolute;
+    top:0%;
+    bottom: 0%;
+    right:15%;
+    width:600px;
+    height:600px;
+    transform: skew(20deg, 0deg);
+    background: linear-gradient(-45deg,var(--accent2), var(--accent4));
+    opacity: 0.5;
+}
+.background-shape-two {
+    position: absolute;
+    top:0%;
+    bottom: 0%;
+    right:-13%;
+    width:600px;
+    height:600px;
+    transform: skew(20deg, 0deg);
+    background: linear-gradient(-45deg,var(--accent2), var(--accent4));
+    opacity: 0.5;
+}
+.background-shape-three {
+    position: absolute;
+    top:0%;
+    bottom: 0%;
+    left:-8%;
+    width:600px;
+    height:600px;
+    transform: skew(20deg, 0deg);
+    background: linear-gradient(-45deg,var(--accent2), var(--accent4));
+    opacity: 0.5;
+}
+.about {
+    color: white;
+    text-align: right;
+    padding: 11rem;
+    padding-left:34%;
+    padding-right: 20rem;
+}
+
+.about h2{
+    font-size: 3.5rem;
+}
+.about p{
+    font-size: 1.5rem;
+}
+.sub-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin:1rem 0;
+}
+.who .sub-title {
+    color:var(--accent3bright)
+}
+.theater-background {
+    background-image: url('./assets/theatre.jpg');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height:600px;
+}
+.theater-background .about.theater {
+    text-align: left;
+    padding-right:34%;
+    padding-left: 20rem;
+}
+.theater .sub-title {
+    color:var(--accent3bright)
+}
+.entertainment-background {
+    background-image: url('./assets/lights.jpg');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height:600px;
+}
+.entertain .sub-title {
+    color:var(--accent3bright)
+}
+.contact-background {
+    background-image: url('./assets/blurLightsBackground.jpg');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height:600px;
+}
+.contact-background.page{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.contact-overlay {
+    background: rgba(0, 0, 0, 0.288);
+    text-align: center;
+    padding-top: 7rem;
+}
+.contact-overlay.page-form{
+    padding-top: 17rem;
+}
+.contact-head {
+    color:var(--accent3);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.contact-form {
+    width:500px;
+    margin:0 auto;
+}
+.wrapper {
+    margin: 1rem 0;
+    width: 100%;
+}
+.wrapper label{
+    color:white;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.wrapper input {
+    width:50%;
+    border:none;
+    height:2rem;
+    border-radius: 2px;
+    margin-left: 1rem;
+    padding-left:0.5rem;
+}
+.contact-form textarea{
+    border:none;
+    border-radius: 2px;
+    font-size: 1.1rem;
+    width:100%;
+    padding:0.5rem;
+}
+.btn{
+    margin:1rem;
+    padding:0.5rem 3rem;
+    border:none;
+    border-radius: 2px;
+    color:white;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, var(--accent1), var(--accent3) );
+    transition: all 0.5s ease;
+}
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    
+
+}
+.main-overlay, .about-overlay, .theater-overlay, .entertainment-overlay, .contact-overlay {
+    background: rgba(0, 0, 0, 0.178);
+    z-index: 100;
+    height:100%;
+}
+footer {
+    position: relative;
+    bottom:0;
+    left:0;
+    right:0;
+    background: linear-gradient(45deg, var(--accent2), var(--accent4) );
+}
+.contact-footer{
+    position: absolute;
+}
+.socials {
+    text-align: center;
+    color:white
+}
+.fa-brands {
+    color:white;
+    font-size: 2rem;
+    margin:0.5rem;
+}
+.fa-brands:hover {
+    color:rgba(250, 250, 250, 0.589);
+    cursor: pointer;
+}
+.creator {
+    text-align: center;
+    color:white;
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+}
+
+/* scroll animations */
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
