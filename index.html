@@ -42,13 +42,13 @@
             <section id='who' class="who-background background">
                 <div class="container about-overlay">
                     <div class="background-shape-two back-shape"></div>
-                    <div class="about who reveal">
-                        <h2>Who I Am</h2>
-                        <div class="sub-title">
+                    <div class="about who">
+                        <h2  class='neonText reveal '>Who I Am</h2>
+                        <div class="sub-title reveal">
                             <img src="./assets/company-icons/vcu.png" alt="">
-                            <div>Bachelor's of Fine Arts in Technical Theater / Stage Management</div>
+                            <div id='1' class='neonText dynamicColor'>Bachelor's of Fine Arts in Technical Theater / Stage Management</div>
                         </div>
-                        <div class="who-body">
+                        <div class="who-body reveal">
                             <p> 
                                 <br/><br/> Passionate, feisty, &amp; level-headed individual with strong communication skills
                                 <br/><br/> Taking personal responsibility for the quality and content of your work
@@ -65,55 +65,56 @@
             <section id='entertain' class="entertainment-background background">
                 <div class="container entertainment-overlay">
                     <div class="about entertain reveal">
-                        <h2>Entertainment Installations</h2>
-                        <div class="sub-title">Holiday Who-be What-ee?</div>
+                        <h2 id='4' class='neonText dynamicColor'>Entertainment Installations</h2>
                     </div>
-                    <div class="marquee">
-                        <div class="direction-statement">Click for More Information</div>
+                    <div class="marquee reveal">
                         <div class="marquee--inner">
                             <span class="orb-container-entertainment">
                             </span>
                             <span class="orb-container-entertainment">
                             </span>
                         </div>
-                  </div>
+                    </div>
+                    <div class="direction-statement neonText reveal">Click Each for More Information</div>
                 </div>
             </section>
             <section id='theater' class="theater-background background">
                 <div class="container theater-overlay">
                     <div class="about theater reveal">
-                        <h2>Theater Work</h2>
+                        <h2 id='1' class='neonText dynamicColor'>Theater Work</h2>
                     </div>
-                    <div class="marquee">
-                        <div class="direction-statement">Click for More Information</div>
+                    <div class="marquee reveal">
                         <div class="marquee--inner">
                             <span class="orb-container-theater">
                             </span>
                             <span class="orb-container-theater">
                             </span>
                         </div>
-                  </div>
+                    </div>
+                    <div class="direction-statement neonText reveal">Click for More Information</div>
                 </div>
             </section>
             
             <section id='contact' class="contact-background background">
                 <div class="container contact-overlay">
-                <div class="background-shape-one back-shape"></div>
-                    <div class="form reveal">
-                        <h1 class="contact-head">Want to connect?</h1>
-                        <form class="contact-form">
+                    <div class="background-shape-one back-shape"></div>
+                    <form action='POST' data-netlify='true' class="form">
+                        <h1 id='3' class="contact-head neonText reveal dynamicColor">Want to connect?</h1>
+                        <form class="contact-form reveal">
                         <div class="wrapper">
                             <label>Name</label>
-                            <input type="text"/>
+                            <input name='name' id="name" type="text"/>
                         </div>
-                        <div class="wrapper">
+                        <div class="wrapper ">
                             <label>E-mail</label>
-                            <input type="text"/>
+                            <input name='email' id="email" type="text"/>
                         </div>
-                        <textarea placeholder='Write your message...' name="" id="" cols="25" rows="5"></textarea>
-                        <button class="btn">Send</button>
+                        <textarea class='wrapper' placeholder='Write your message...' name="message" id="message" cols="25" rows="5"></textarea>
+                        <div class="wrapper">
+                            <div data-netlify-recaptcha="true"></div>
+                        </div>
+                        <button type='submit' class="btn">Send</button>
                     </form>
-                    </div>
                 </div>
             </section>
             <footer>
@@ -125,7 +126,13 @@
                     Website Created by: <a href="https://www.linkedin.com/in/samgamgy/">Sam</a>
                 </div>
             </footer>
-        
-        <script src='./main.js'></script>
+        <script>
+        // close pop up
+            const removeElm = (id) => {
+             let elm = document.getElementById(id)
+             elm.remove()
+            };
+        </script>
+        <script type='module' src='./main.js'></script>
     </body>
 </html>

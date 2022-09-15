@@ -210,8 +210,10 @@
     margin-top: 1rem;
     margin-right: auto;
     margin-left: auto;
+    /* animation: flicker 1.5s infinite alternate; */
     color: var(--accent4);
   }
+
   .head{
     text-align: center;
     margin-top:1rem;
@@ -245,7 +247,21 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-  
+  .neonText {
+    font-weight:200;
+    color: #fff;
+    text-shadow:
+    /* White glow */
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    /* Green glow */
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
   
   .marquee {
     background: #333333ed;
