@@ -36,36 +36,28 @@
     transition: all 0.5s ease;
 }
 .nav-links:hover{
-    /* transform: scale(1.2); */
     border-bottom: 5px solid var(--accent1bright) ;
-    
     cursor: pointer;
 }
 .current{
     border-bottom: 5px solid var(--accent1bright) ;
-    
 }
 .logo {
     margin-right:auto;
 }
-.main-background {
+section.main-background {
     background-image: url('./assets/blurLightsBackground.jpg');
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    height:600px;
+    height: 600px;
 }
 .title {
     padding-top: 13rem;
     color: white;
     text-align: center;
     position:relative;
-    
 }
 .title h1 {
     font-family: 'Sacramento', cursive;
     font-size: 10rem;
-    
 }
 .titles {
     font-size: 3rem;
@@ -92,97 +84,74 @@
 }
 .who-background {
     background-image: url('./assets/backstage.jpg');
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    height:600px;
 }
-.background-shape-one {
+.back-shape{
     position: absolute;
     top:0%;
     bottom: 0%;
-    right:15%;
-    width:600px;
-    height:600px;
+    width:800px;
+    height:800px;
     transform: skew(20deg, 0deg);
-    background: linear-gradient(-45deg,var(--accent2), var(--accent4));
+    background:linear-gradient(-45deg,var(--accent2), var(--accent1), var(--accent3), var(--accent4));
+    background-size: 400% 400%;
+    animation: nav-gradient 20s ease infinite;
     opacity: 0.5;
 }
+.background-shape-one {right:15%;}
 .background-shape-two {
-    position: absolute;
-    top:0%;
-    bottom: 0%;
-    right:-13%;
-    width:600px;
-    height:600px;
-    transform: skew(20deg, 0deg);
-    background: linear-gradient(-45deg,var(--accent2), var(--accent4));
-    opacity: 0.5;
+    right: 0;
+    left: 0;
+    overflow: hidden;
 }
-.background-shape-three {
-    position: absolute;
-    top:0%;
-    bottom: 0%;
-    left:-8%;
-    width:600px;
-    height:600px;
-    transform: skew(20deg, 0deg);
-    background: linear-gradient(-45deg,var(--accent2), var(--accent4));
-    opacity: 0.5;
-}
+.background-shape-three {left:-8%;}
 .about {
     color: white;
-    text-align: right;
-    padding: 11rem;
-    padding-left:34%;
-    padding-right: 20rem;
+    padding: 5%;
 }
-
-.about h2{
-    font-size: 3.5rem;
-}
+.about h2{font-size: 3.5rem;}
 .about p{
-    font-size: 1.5rem;
+    width: 600px;
+    font-size: 1.7rem;
 }
 .sub-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin:1rem 0;
 }
+.sub-title img {
+    width: 100px;
+}
 .who .sub-title {
-    color:var(--accent3bright)
+    color: var(--accent2);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 3rem;
+    background: radial-gradient(circle, rgba(187, 187, 187, 1) 0%, rgba(192, 192, 192, 0.85)70%, rgba(129, 129, 129, 0)100%);
 }
-.theater-background {
-    background-image: url('./assets/theatre.jpg');
+.who-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:  2rem;
+    gap: 3rem;
+
+}
+.who-body img {
+    border-radius: 50%;
+    width: 300px;
+    box-shadow: -1px 6px 19px 4px #6a6969;
+}
+.theater-background {background-image: url('./assets/theatre.jpg');}
+.theater .sub-title {color:var(--accent3bright)}
+.entertainment-background {background-image: url('./assets/lights.jpg');}
+.entertain .sub-title {color:var(--accent3bright)}
+.contact-background {background-image: url('./assets/blurLightsBackground.jpg');}
+.background{
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover; 
-    height:600px;
-}
-.theater-background .about.theater {
-    text-align: left;
-    padding-right:34%;
-    padding-left: 20rem;
-}
-.theater .sub-title {
-    color:var(--accent3bright)
-}
-.entertainment-background {
-    background-image: url('./assets/lights.jpg');
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    height:600px;
-}
-.entertain .sub-title {
-    color:var(--accent3bright)
-}
-.contact-background {
-    background-image: url('./assets/blurLightsBackground.jpg');
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    height:600px;
+    height:800px;
 }
 .contact-background.page{
     height: 100%;
@@ -193,7 +162,6 @@
     left: 0;
 }
 .contact-overlay {
-    background: rgba(0, 0, 0, 0.288);
     text-align: center;
     padding-top: 7rem;
 }
@@ -204,6 +172,15 @@
     color:var(--accent3);
     font-size: 3rem;
     margin-bottom: 2rem;
+}
+.form{
+    height: min-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 .contact-form {
     width:500px;
@@ -247,8 +224,6 @@
 .btn:hover {
     cursor: pointer;
     transform: scale(1.05);
-    
-
 }
 .main-overlay, .about-overlay, .theater-overlay, .entertainment-overlay, .contact-overlay {
     background: rgba(0, 0, 0, 0.178);
@@ -260,7 +235,9 @@ footer {
     bottom:0;
     left:0;
     right:0;
-    background: linear-gradient(45deg, var(--accent2), var(--accent4) );
+    background:linear-gradient(-45deg,var(--accent2), var(--accent1), var(--accent3), var(--accent4));
+    background-size: 400% 400%;
+    animation: nav-gradient 20s ease infinite;
 }
 .contact-footer{
     position: absolute;
@@ -283,6 +260,10 @@ footer {
     color:white;
     padding-bottom: 1rem;
     padding-top: 0.5rem;
+}
+/* modal */
+.port-imgs{
+    width:200px;
 }
 
 /* scroll animations */
