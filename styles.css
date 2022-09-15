@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     transition: all .2s ease-out;
+    opacity: 0.8;
   }
   .orb-img-wrapper {
     width: 100%;
@@ -51,10 +52,10 @@
     background-color: cadetblue;
   }
   .job-title{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
     text-align: center;
-    width: 250px;
+    width: 320px;
   }
   .job-title.double{
     font-size: 1.2rem;

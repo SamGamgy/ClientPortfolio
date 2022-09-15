@@ -23,7 +23,7 @@ let portItems = [
       'Liaison for company owners if clients, vendors had any additional needs.' ,
       'Handled shipping of décor items through trucking companies and other shipping options.' 
     ],
-    slideShow:true,
+    slideShow:false,
     portImgs:[],
     },
     {id:2,
