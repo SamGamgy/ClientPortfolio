@@ -64,7 +64,7 @@ portItems
                             </div>
                             <div class="pop-up-body">
                                 ${areProjects ? 
-                                  `<div class="pop-up-projects">
+                                  `<div class="pop-up-projects is-visible">
                                   <div class="pop-up-sub-head">Projects</div>
                                   <ul class="pop-up-project-list">
                                       ${infoGrab(id, projects)}
@@ -87,6 +87,7 @@ portItems
                                         <li class="port-imgs mySlides"><img src="./assets/theatre.jpg" alt=""></li>
                                     </ul>
                                 </div>
+                                <button class='pop-up-btn btn onQuery' onclick='displayDescript(this)'>Job Description</button>
                             ${ slideShow ? 
                               ` 
                                 <button class='pop-up-btn btn' onclick='displayImgs(this)'>Photos</button>
@@ -125,6 +126,7 @@ icon.addEventListener('click', function() {
     btn.textContent = "Back"
   }
 }
+ 
 
 // iterate through array data 
 function getObjKey(obj, value) {

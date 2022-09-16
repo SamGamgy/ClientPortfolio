@@ -102,6 +102,7 @@
     align-self: flex-start;
     color: rgb(220 101 101);
     transition: all 0.2s ease;
+    padding:1rem;
   }
   .pop-up-header div i:hover {
     transform: scale(1.05);
@@ -142,7 +143,7 @@
     right: 0;
     margin: 1rem auto;
     display: block;
-    width: 200px;
+    width: inherit;
   }
   .descript {
     height: 50vh;
@@ -296,6 +297,8 @@
     width: 50%;
   }
   .is-visible{display: block;}
+  .descript.is-visible{display: block;}
+  .pop-up-projects.is-visible{display: block;}
 
   @keyframes marquee {
     0% { left: 0; }

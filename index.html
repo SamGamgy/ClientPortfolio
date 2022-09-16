@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./styles.css">
         <link rel="stylesheet" href="./base.css">
         <link rel="stylesheet" href="./landing-page.css">
+        <link rel="stylesheet" href="./responsive.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;800&family=Sacramento&display=swap" rel="stylesheet">
@@ -20,10 +21,15 @@
             <nav>
                 <ul class="nav">
                     <li class='logo' style='font-family: Sacramento, cursive; font-size:2rem;'>R Elder.</li>
-                    <a class="nav-links" href="./index.html#who">About Me</a>
-                    <a class="nav-links" href="./index.html#entertain">Entertainment</a>
-                    <a class="nav-links" href="./index.html#theater">Theater</a>
-                    <a class="nav-links" href="./index.html#contact">Contact</a>
+                    <li class="nav-items">
+                        <a class="nav-links" href="./index.html#who">About Me</a>
+                        <a class="nav-links" href="./index.html#entertain">Entertainment</a>
+                        <a class="nav-links" href="./index.html#theater">Theater</a>
+                        <a class="nav-links" href="./index.html#contact">Contact</a>
+                    </li>
+                    <a class='mobile-icon' href="javascript:void(0);" onclick="navBarMobile()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </ul>
             </nav>
         </header>
@@ -71,7 +77,7 @@
                         <div class="marquee--inner">
                             <span class="orb-container-entertainment">
                             </span>
-                            <span class="orb-container-entertainment">
+                            <span class="span-copy orb-container-entertainment">
                             </span>
                         </div>
                     </div>
@@ -87,7 +93,7 @@
                         <div class="marquee--inner">
                             <span class="orb-container-theater">
                             </span>
-                            <span class="orb-container-theater">
+                            <span class="span-copy orb-container-theater">
                             </span>
                         </div>
                     </div>
@@ -119,8 +125,7 @@
             </section>
             <footer>
                 <div class="socials">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/rachel-elder/"> <i class="fa-brands fa-linkedin"></i> </a>
                 </div>
                 <div class="creator">
                     Website Created by: <a href="https://www.linkedin.com/in/samgamgy/">Sam</a>
@@ -132,6 +137,30 @@
              let elm = document.getElementById(id)
              elm.remove()
             };
+
+            function navBarMobile() {
+                var x = document.querySelector(".nav-items");
+                if (x.classList.contains('responsive')) {
+                x.classList.remove('responsive');
+                } else {
+                x.classList.add("responsive");
+                }
+            };
+
+            const displayDescript = (btn) => {
+                let descript = document.querySelector('.descript')
+                let projects = document.querySelector('.pop-up-projects')
+
+                if (descript.classList.contains('is-visible')) {
+                    descript.classList.remove('is-visible')
+                    projects.classList.add('is-visible')
+                    btn.textContent = "Job Description"
+                } else {
+                    descript.classList.add('is-visible')
+                    projects.classList.remove('is-visible')
+                    btn.textContent = "Projects"
+                }
+                }
         </script>
         <script type='module' src='./main.js'></script>
     </body>
