@@ -9,6 +9,26 @@
 }
 .pop-up-btn.btn.onQuery{display: none;}
 
+@media all and (min-width:1301px) {
+    .title h1{font-size: 14rem;}
+    .titles{font-size: 6rem;}
+    .nav {
+        height: 6rem;
+        font-size: 2rem;
+    }
+    .about h2{font-size: 8rem;}
+    .about{padding:2%;}
+    .sub-title{font-size: 3rem;}
+    .who-body img{width:400px}
+    .about p {
+        width: max-content;
+        font-size: 2.3rem;
+    }
+    .pop-up{
+        width:40%;
+        height:60vh;
+    }
+}
 @media all and (max-width:1300px) {
     .job-title{
         font-size: 1.6rem;
@@ -27,6 +47,7 @@
         width: auto;
         margin: 0 1rem;
     }
+    .right .marquee--inner, .left .marquee--inner{animation: none;}
     .marquee div.orb{width:auto;}
     .marquee{
         background: none;
@@ -88,7 +109,7 @@
         flex-direction: column-reverse;
         gap:0;
         align-items: normal ;
-        padding: 0.5rem;
+        padding: 1.5rem;
         margin-top:4rem;
         text-align: center;
         align-items: center;
@@ -148,7 +169,7 @@
 
 @media all and (max-width:550px) {
     .descript{display: none;}
-    .onQuery{display: block;}
+    .pop-up-btn.btn.onQuery{display: block;}
     .wrapper {
         flex-direction: column;
         align-items: center;

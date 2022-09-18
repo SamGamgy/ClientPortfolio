@@ -75,8 +75,9 @@
     left: 0;
     right: 0;
     z-index: 200;
-    border-radius: 5px;
+    border-radius: 20px;
     background: rgb(248 248 248 / 92%);
+    transition: all .4s ease;
   }
   .pop-up-header{
     display: flex;
@@ -285,9 +286,14 @@
     width: 200%;
     margin: 70px 0;
     position: absolute;
-    animation: marquee 20s linear infinite;
+    
   }
-  
+  .right .marquee--inner{
+    animation: right 20s linear infinite;
+  }
+  .left .marquee--inner{
+    animation: left 20s linear infinite;
+  }
   .marquee--inner:hover {
     animation-play-state: paused;
   }
@@ -300,7 +306,11 @@
   .descript.is-visible{display: block;}
   .pop-up-projects.is-visible{display: block;}
 
-  @keyframes marquee {
+  @keyframes left {
     0% { left: 0; }
     100% { left: -100%; }
+  }
+  @keyframes right {
+    0% { right: 0; }
+    100% { right: -100%; }
   }
