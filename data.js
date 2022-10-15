@@ -96,7 +96,7 @@ let portItems = [
     category:'entertainment',
     categoryNum:3,
     imgSrc:'assets/company-icons/rws-logo-main.png',
-    date:'May 2018 – May 2019',
+    date:' May 2018 – May 2019',
     jobTitle:'Production Manager & Associate Technical Director',
     areProjects:true,
     projects:[
@@ -128,7 +128,7 @@ let portItems = [
       'Included in a specialty crew that struck the entire event as well as project coordinating with client and vendors simultaneously',
       'Participated in various training to further knowledge of safety, OSHA standards, and rigging.',
     ],
-    slideShow:false,
+    slideShow:true,
     portImgs:[],
     },
     {id:5,

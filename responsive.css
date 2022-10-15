@@ -9,7 +9,14 @@
 }
 .pop-up-btn.btn.onQuery{display: none;}
 
-@media all and (min-width:1301px) {
+@media all and (max-width:1850px) {
+    .sub-title{font-size: 3rem;}
+    .who-body img{width:400px}
+    .about p {
+        font-size: 2rem;
+    }
+}
+@media all and (max-width:1301px) {
     .title h1{font-size: 14rem;}
     .titles{font-size: 6rem;}
     .nav {
@@ -18,11 +25,11 @@
     }
     .about h2{font-size: 8rem;}
     .about{padding:2%;}
-    .sub-title{font-size: 3rem;}
-    .who-body img{width:400px}
+    .sub-title{font-size: 2.2rem;}
+    .who-body img{width:250px}
     .about p {
         width: max-content;
-        font-size: 2.3rem;
+        font-size: 1.6rem;
     }
     .pop-up{
         width:40%;
