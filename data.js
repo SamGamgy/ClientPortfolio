@@ -128,7 +128,7 @@ let portItems = [
       'Included in a specialty crew that struck the entire event as well as project coordinating with client and vendors simultaneously',
       'Participated in various training to further knowledge of safety, OSHA standards, and rigging.',
     ],
-    slideShow:true,
+    slideShow:false,
     portImgs:[],
     },
     {id:5,

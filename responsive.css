@@ -32,8 +32,15 @@
         font-size: 1.6rem;
     }
     .pop-up{
-        width:40%;
+        width:90%;
         height:60vh;
+    }
+    .descript {
+        height: 35vh;
+    }
+    .pop-up-body {
+        height:36vh;
+        overflow: hidden;
     }
 }
 @media all and (max-width:1300px) {
@@ -93,7 +100,7 @@
     }
     .responsive{
         position: absolute;
-        top: 4rem;
+        top: 6rem;
         right: 0;
         display: flex;
         flex-direction: column;
@@ -164,7 +171,7 @@
         width:80%;
         text-align: left;
     }
-    .company{font-size: 1.6rem;}
+    .company{font-size: 2.6rem;}
     .date{text-align: left;}
     .pop-up-body{
         flex-wrap: wrap;
